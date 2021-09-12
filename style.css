@@ -1,0 +1,878 @@
+/* ---------  font decleration ---------------- */
+ /* resert */
+ *{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+  /*   ----------------   color variables --------------*/
+:root {
+	--main-header-bg: #232f3e;
+	--second-header-bg: #131921;
+	--main-border: #ff9000;
+	--main-border-shadow: #febd69;
+	--main-text: #f3a847;
+	--second-text: white;
+	--main-search-opt: #cdcdcd;
+	--second-search-opt: #f3f3f3;
+	--sub-menu:#565659;
+	--text-color:#0f1111;
+	--border-radius: 0.2rem;
+	--img-source: none;
+	--link-color: #057794;
+	/*  ------------------ */ 
+	font-family:"Amazon Ember Regular" !important;
+	font-size:16px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+}
+  /****************************************  font      **********************/
+  @import url(//db.onlinewebfonts.com/c/157c6cc36dd65b1b2adc9e7f3329c761?family=Amazon+Ember);
+
+  @font-face {
+	  font-family: "Amazon Ember"; 
+	  src: url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.eot"); 
+	  src: url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.eot?#iefix") 
+	  format("embedded-opentype"), 
+	  url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.woff2") 
+	  format("woff2"), url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.woff") 
+	  format("woff"), url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.ttf") 
+	  format("truetype"), url("//db.onlinewebfonts.com/t/157c6cc36dd65b1b2adc9e7f3329c761.svg#Amazon Ember") 
+	  format("svg"); 
+	}
+	/* // For normal */
+  .normal {
+   font-weight: 500;
+   font-size: 26px;
+   line-height: 36px;
+  }
+  .normal_sub{
+	  font-weight: 400;
+	  font-size: 24px;
+	  line-height: 32px;
+  }
+  .normal_light{   /*first menu-second row  & second menu - right*/
+	font-weight: 500;		/* instide of 700 */
+	font-size: 14px;      /* instide of 14px; */
+	line-height: 15px;
+  }
+  .normal_between{   
+	font-weight: 300;		
+	font-size: 14px;     
+	line-height: 24px;
+  }
+  .normal_normal{
+	  font-weight: 400;
+	  font-size: 14;
+	  line-height: 20;
+  }
+  .normal_between_700{   
+	font-weight: 700;		
+	font-size: 14px;     
+	line-height: 20px;
+  }
+  /* // For bold */
+  .bold,
+  strong {
+   font-weight: 500;
+   font-size: 40px;
+   line-height: 48px;
+  }
+    /* // For thin */
+  .light {   /* first menu - first row */
+   font-weight: 300;				/* instide of 400 */
+   font-size: 12px;                 
+   line-height: 14px;
+  } 
+  .light2 {   /* second menu - left */
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 12px;
+   } 
+  .menu-bar{
+	font-size: 14px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 21px;
+  }
+/* --------------- end of font decleration ----------*/  
+/*************** code start here *****************/
+   body {
+/*	overflow: hidden;*/
+	font-family: "Amazon Ember", Arial, sans-serif;
+	 margin: 0;
+	 background-repeat: no-repeat;
+	 background-attachment: fixed;
+	 background-position: center;
+	 position: static;
+  }
+#container{
+	width: 100%;
+	height: 3.75rem ; /* 64 px */
+	background-color:var(--second-header-bg) ;
+}
+.page_content{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+ /*  -----------  amazon logo image -------  nav-right --- */
+#nav-logo{
+	justify-content: center;
+	margin-top: 1rem ; /* 20px; */
+	margin-left: 10px; 
+}
+.nav-logo{
+	background: url('images/amazon-logo.png') no-repeat -11px -11px;
+	width: 6.1rem;   
+	height: 2rem;   
+	/*
+	background: url('imgs/amazon-logo.png') no-repeat -11px -51px;
+	width: 78px;
+	height: 24px;                 nav-logo
+	*/
+}
+/* --------------- location image ----------------*/
+.location{
+    background: url('images/nav-sprite-global.png') no-repeat -71px -340px;
+	width: 17px;
+	height: 21px;
+    margin: 5px;
+}
+.search {
+	background: url('images/nav-sprite-global.png') no-repeat -10px -290px;
+	width: 21px;
+	height: 21px;
+    }
+.flag {
+    background: url('images/i9a5ctVWFTutHRA.png') no-repeat -0px -460px;
+    width: 36px;
+    height: 24px;
+	margin-top: 10px;
+}
+#arrow_down{
+	background: url('images/i9a5ctVWFTutHRA.png') no-repeat -164px -174px;
+	width: 14px;
+	height: 8px;
+	zoom: 0.2;  /* to decease the triangle size */
+}
+.cart_load{
+	display: flex;
+	flex-direction: row;
+	padding-top: 7px;
+/*	margin-left: 10px; */
+}
+.cart{
+	background: url('images/nav-sprite-global.png') no-repeat -10px -340px;
+	width: 38px;
+	height: 26px;
+}
+.wrapper , .sign {
+	margin-top: 3px;
+	height: 48px;
+	display: flex;
+	flex-direction: row;  /*-----*/
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.nav-tools{
+/*	margin-top: 3px;*/
+	height: 48px;
+	display:flex;
+	flex-direction: row;
+	margin-left: 10px;
+}
+.orders{
+	/*margin-top: 3px;*/
+	height: 48px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;    
+}
+.cart{
+	padding-top: 10px;
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+/*	justify-content: center; */
+	margin-left: 10px;
+}
+.account{
+	padding-top: 10px;
+	height: 48px;
+	margin-left: 10px;
+	justify-self: center;
+	vertical-align:middle;
+}
+a {
+	box-sizing: border-box;
+	text-decoration: none;
+	color: white;            /*    white color for all links in the nave bar  */
+}
+header {
+	background: var(--main-header-bg);
+	height: 3rem;
+	font-size: 1rem;
+	display: flex;
+}
+#nav-bar {
+	display: flex;
+	flex-flow: column nowrap;
+	flex: 1;
+}
+#nav-belt {
+	display: flex;
+	height: 3.5rem;
+	width: 100%;
+	background: var(--second-header-bg);
+}
+
+#nav-belt > .nav-left {
+	box-sizing: border-box;
+	display: flex;
+}
+#nav-logo {
+	box-sizing: border-box;
+	display: flex;
+	padding: 0.5rem 0 0.5rem 0.5rem;
+}
+#nav-logo > a {
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	padding: 0 0.5rem 0 0.5rem;
+	margin: 1rem;
+}
+#nav-logo > a:hover {                         /*    chaange to smaller p_price  */
+	border: 0.1rem solid var(--second-text);                         
+	border-radius: var(--border-radius);
+	margin: 0;
+	color: var(--second-text);
+	box-shadow: 0rem 0rem 0.3rem var(--main-border-shadow);
+}
+#nav-belt > .nav-fill {
+	box-sizing: border-box;
+	display: flex;
+	flex: 1 1 auto;
+}
+
+#nav-search {
+	box-sizing: border-box;
+	width: auto;
+	display: flex;
+	flex: 1 1 auto;
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	overflow: hidden;
+}
+#nav-search-bar-form {
+	box-sizing: border-box;
+	display: flex;
+	flex: 1 1 auto;
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+#nav-search-bar-form:focus-within {
+	box-sizing: border-box;
+	border: 0.2rem solid var(--main-border);
+	margin: 0 -0.2rem 0 -0.2rem;
+	box-shadow: 0rem 0rem 0.3rem var(--main-border-shadow);
+}
+#nav-search-bar-form .nav-left {
+	box-sizing: border-box;
+	display: flex;
+	background: var(--second-search-opt);
+	align-items: center;
+}
+#nav-search-bar-form .nav-left a {
+	display: flex;
+	color: black;
+	padding: 0 0.5rem 0 0.5rem;
+	flex: 1 1 auto;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+}
+#nav-search-bar-form .nav-left a:hover {           /* ----------   hover  ----------*/
+	background: var(--main-search-opt);
+}
+#nav-search-bar-form .nav-fill {
+	box-sizing: border-box;
+	display: flex;
+	flex: 1 1 auto;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	background: white;
+	border-left: 0.1rem solid var(--main-search-opt);
+	border-right: 0.1rem solid var(--main-text);
+}
+#nav-search-bar-form .nav-fill input {
+	box-sizing: border-box;
+	flex: 1 1 auto;
+	padding: 0;
+	font-size: 1rem;
+	text-indent: 0.5rem;
+	border: 0;
+}
+#nav-search-bar-form .nav-fill > input:focus {
+	outline: none;
+}
+#nav-search-bar-form .nav-right {
+	box-sizing: border-box;
+	display: flex;
+	background: var(--main-border-shadow);
+	align-items: center;
+}
+#nav-search-bar-form .nav-right > button {
+	display: flex;
+	/*flex: 1 1 auto; */
+	align-items: center;
+	border: 0;
+	background: var(--main-border-shadow);
+	width: 100%;
+	height: 100%;
+	padding:0.5rem;                   /*  פה בוצע השינוי */
+	cursor: pointer;
+}
+#nav-search-bar-form .nav-right > button:hover {          /*---------- hover ---------*/
+	background: var(--main-text);
+}
+ /* **********************************/ 
+#nav-belt > .nav-right {
+	box-sizing: border-box;
+	display: flex;
+}
+
+#nav-tools {
+	display: flex;
+	flex: 1 1 auto;
+	padding: 0.1rem 0.5rem 0.1rem 0;
+	/*margin-top: 0.5rem;*/
+}
+
+#nav-tools > a {
+	box-sizing: border-box;
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	padding: 0 0.5rem 0 0.5rem;
+	margin: 0.1rem;
+}
+
+#nav-tools > a:hover {
+	border: 0.1rem solid var(--second-text);                         
+	border-radius: var(--border-radius);
+	margin: 0;
+	color: var(--second-text);
+	box-shadow: 0rem 0rem 0.3rem var(--main-border-shadow);
+} /***************************************/
+/* -------------------    nav main ....... second menu  ---------------------*/
+#nav-main {
+	display: flex;
+	position:relative;
+	width: 100%;
+	background-color: var(--main-header-bg);
+}
+/*   ----------------   burger menu botton -----------*/
+.menu-btn{
+	position:relative;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	width: 40px;
+	height: 36px;
+	cursor: pointer;
+	transition: all 0.5s ease-in-out;
+	margin-left: 25px;
+}
+.menu-btn_burger{
+	width: 18px;
+	height: 2px;
+	background: #ffffff	;
+	border-radius: 1px;
+	box-shadow: 0 2px rgba(255,101,47,.2);
+	transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before,
+.menu-btn_burger::after{
+	content: '';
+	position: absolute;
+	width: 18px;
+	height: 2px;
+	background: #ffffff	;
+	border-radius: 1px;	
+	box-shadow: 0 2px rgba(255,101,47,.2);
+	transition: all 0.5s ease-in-out;
+}
+.menu-btn_burger::before{
+	transform: translateY(-6px);
+}
+.menu-btn_burger::after{
+	transform: translateY(6px);
+}
+/* ----------------------------- end of burger button --------------- */
+.second-all{
+	color: #ffffff;
+	margin-left: 5px;
+}
+.menu-btn{
+	margin-top: 2px;
+	height: 27px;
+	width: 60px;
+	padding: 4px;
+}
+.menu-btn:hover{
+	border: 1px solid white;
+}
+.covid-19{
+	color: #ffffff;
+	display: flex;
+	justify-content: right;
+}
+.covid-19 a{
+	margin-top: 2px;
+	height: 27px;
+	margin-right: 10px;
+	padding: 4px;
+}
+.menu{       
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.left-side{
+	display: flex;
+}
+.second-menu {
+    padding: 10px 0px;
+	margin-left: 0;
+    text-decoration: none;
+    display: flex;
+    flex-direction:row;
+} 
+.second-menu li{
+	margin-left: 20px;
+}
+.second-menu li a{
+	padding: 4px 14px;
+}
+.second-menu li a:hover{
+	border: 1px solid white;
+}
+.covid-19 a:hover{
+	border:solid 1px white;
+}
+
+/* ---------------------------------  end of second menu -----------------------------*/
+.third-menu{
+	color: var(--sub-menu);
+	position: relative;
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	border-bottom: 1px solid rgb(214, 209, 209);
+}
+.third-menu li a{
+	text-decoration: none;
+	padding: 7px 6px;
+	color: var(--sub-menu);
+}
+.third-menu li{
+	text-align: center;
+	list-style: none;
+	padding-bottom: 8px;
+}
+.third-menu li a:hover{
+	color: var(--main-text);
+	border-bottom: 2px solid var(--main-text);
+}
+.small-menu{
+	position: relative;
+	margin-top: 63px;
+}
+/* ----------------------  fourth-menu --------------------*/
+.fourth-menu{
+	color: var(--sub-menu);
+	position: relative;
+	margin-left: 10%;
+	display: flex;
+	text-decoration: none;
+	flex-direction: row;
+}
+.fourth-menu li a{
+	text-decoration: none;
+	padding: 7px 6px;
+	color: var(--sub-menu);
+}
+.fourth-menu li{
+	text-align: center;
+	list-style: none;
+}
+.fourth-menu li a:hover{
+	text-decoration: underline;
+}
+/* -----------------------   small menu end   ----------*/
+/* ------------------ Small pics ----------------*/    /* ----------------the content of the page -----------------*/
+.page_content .first_view{
+	flex: 3;
+}
+.page_content .right_notes{
+	flex: 1;
+}
+.main-content{
+	margin-top: 1rem;
+	display: flex;
+	position:relative;
+	padding-bottom: 2.5rem;
+	border-bottom: 1px solid rgb(214, 209, 209);  /* bottom line  */
+}
+.small-pics{
+	position: relative;
+	margin-left: 16%;
+	margin-top: 18px;
+}
+.small_image{
+	height: 50px;
+	width: 50px; 
+	margin:0.25rem;
+	box-sizing: content-box;
+	border:1px solid rgba(182, 178, 178, 0.918);
+}
+.small_image:hover {                 
+	border: 0.1rem solid var(--main-border);
+	border-radius: var(--border-radius);
+	margin: 0;
+	color: var(--main-text);
+	box-shadow: 0rem 0rem 0.3rem var(--main-border-shadow);
+}
+/*-------------- big image ------------------*/
+.big_image{
+	margin:1.25rem;
+	width: 29%;
+	height: auto;
+	background-image: url('./images/big_pic1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+	zoom: 1.05;
+}
+.explane{
+	text-align: center;
+	color:var(--sub-menu);
+}
+/*    ---------------------------------------- change text under the  image --------------------   */
+.label:after{
+    content:'Roll over image to zoom in';
+}
+.label:hover:after{
+    content:'Click image to open expanded view';
+} 
+/*--------------------- to change the text ------------------------*/
+/*.explane:hover a::before{
+	content: 'Roll over image to zoom in';
+}
+.explane:hover a::after{
+	content: 'Click image to view expanded view';*/
+/* -------------  the text right to the picture middle section -----------------  */
+.prop_head{
+	margin-left: 2rem;
+	padding: 10px;
+}
+.lol{
+color: var(--text-color);
+}
+.lol_link{
+	line-height: 20px;
+	color: #057794;
+
+}
+.lol_link:hover ,.voted:hover ,.answered:hover{
+	color: var(--main-text);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.rating{
+	color: #057794;
+	display: flex;
+	border-bottom: 1px solid rgb(214, 209, 209);  /* bottom line  */
+}
+.stars{
+	background: url('images/qgGRgelkhXwysfn.png')  no-repeat -874px -260px;
+	width: 120px;
+	height: 22px;
+	zoom: 0.7;
+}
+.open_arrow{
+	background: url('images/f9Cwl2OUDVHGXk8.png')  no-repeat -163px -592px;
+	width: 15px;
+	height: 8px;
+	zoom: 0.5;
+	align-self: center;
+	margin-left: 1rem;
+}
+.voted{
+	margin-left: 1rem;
+}
+.seprator{
+	margin-left: 0.5rem;
+}
+.answered{
+	margin-left: 0.5rem;
+}
+.toy_data{
+	width: 100;
+	text-align: left;
+}
+.mid{
+	width: 1rem;
+}
+/* -----------------                 -----------------------------*/
+.price{
+	margin-top: 1rem;	
+}
+.p_price {
+	color :#B3564D;
+	font-size: 18px;
+}
+.price_color{
+	color :#B3564D;
+}
+.figure{
+	border-bottom: 1px solid rgb(214, 209, 209);  /* bottom line  */
+}
+.item_about{
+	margin-top: 1rem;	
+}
+.new_price a:hover{
+	color:#B3564D;
+	text-decoration: underline;
+	cursor: pointer;
+}
+/* --------------- right deatails section ------------------------*/
+.right_sec{
+	width: 50%; /*--------------------------------------------- width ---------------------*/
+	min-width: 11.25rem;
+	border: 1px solid rgb(214, 209, 209);  
+	border-radius: 10px;
+	padding: 0.75rem ;
+	height:auto;
+	margin-top: 1.6rem;
+}
+.arrive{
+	margin-top: .75rem;
+}
+.deliver_loc{
+	/*color: black;*/
+	margin-top: 0.75rem;
+}
+.location_point ,.warr ,.eligible {    /* give the a links a color different from white */
+	color:var(--main-header-bg);
+}
+.btn{
+	width: 100%;
+	height: 1.75rem;
+	border-radius: 15px;
+}
+.btn1{
+	margin-top: 0.5rem;
+	background-color:#ffd814 ;
+	border:#fcd200 1px solid ;
+	color: var(--main-header-bg);
+}
+.btn1:hover{
+	background-color: #f7ca00;
+	cursor: pointer;
+}
+.btn2{
+	background-color:#ffa41c;
+	border:#ff8f00 solid 1px ;
+	color: var(--main-header-bg);
+	margin-top: 0.5rem;
+}
+.btn2:hover{
+	background-color: #fa8900;
+	cursor: pointer;
+}
+.return_p{
+	margin-top: 0.75rem;
+}
+.secure{
+	margin-top: 0.5rem;
+}
+.case{
+	zoom: 0.65;
+}
+.link{
+	color:var(--link-color);
+}
+.link:hover{
+	color:#B3564D;
+	cursor: pointer;
+}
+.right_details{
+	display: flex;
+}
+.Price_c{
+	color:#B3564D;
+}
+.third_arrow{
+	margin-top: 0.75rem;
+}
+#add{
+	margin-top: 0.75rem;
+}
+.sepirate_line{
+	width: 100%;
+	margin-top: 0.75rem;
+	border-bottom: 1px solid rgb(214, 209, 209);  /* bottom line  */	
+}
+.btn3{
+	height: 1.75rem;
+	width: 100%;
+	border: 1px solid black;
+	border-radius: 5px;
+	margin-top: 0.75rem;
+	background-color: var(--main-search-opt);
+	color: var(--second-header-bg);
+}
+.btn3:hover{
+	cursor: pointer;
+}
+.new_from{
+	margin-top: 1.5rem ;
+	width: 50%; /*--------------------------------------------- width ---------------------*/
+	min-width: 11.25rem;
+	border: 1px solid rgb(214, 209, 209);  
+	border-radius: 10px;
+	padding: 0.75rem ;
+	height:auto;
+}
+/***  --------------------  sale sale sale ------------------ ***/ 
+.second_view ,.rolling_products{
+	margin-left: 16%;
+	margin-top: 1.25rem;
+	border-bottom: 1px solid rgb(214, 209, 209);  /* bottom line  */		
+	
+}
+.frequently{
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 16px;
+	font-weight:700 ;
+	color:#cc6600 ;
+}
+.plus{	
+height: 100px;
+width: 50px;
+text-align: center;
+margin-bottom: 48%;
+}
+.sale_img{
+	height: 100px;
+	width: 100px;
+}
+.sale{
+	margin-top: 2rem;
+	display: flex;
+}
+.sale_price{
+
+	margin-left: 2rem;
+}
+.btn_sale{
+	line-height: 19px;
+	width: 7rem;
+	height: 1.4rem;
+	border-radius: 5px;
+}
+/* ------------------        -------------------------------- */
+.share{
+	margin-top: 1rem;
+	display: flex;
+	width: 50%;
+	height: 1.75rem;
+	justify-content: center;
+	vertical-align: middle;
+}
+.share1{    
+	background: url('images/M9SSJsDj8YXHO4p.png') no-repeat -512px -442px;  /*message icon */
+	width: 38px;
+	height: 30px;
+	zoom: 0.5;
+	margin-left: 0.75rem;
+}
+.share2{
+	background: url('images/M9SSJsDj8YXHO4p.png')  no-repeat -473px -302px;  /*facebook icon */
+	width: 35px;
+	height: 35px;
+	zoom: 0.5;
+	margin-left: 0.75rem;
+}
+
+.share3{
+	background: url('images/M9SSJsDj8YXHO4p.png') no-repeat -386px -212px;    /*twitter icon */
+	width: 36px;
+	height: 31px;
+	zoom: 0.5;
+	margin-left: 0.75rem;
+}
+.share4{
+	background: url('images/M9SSJsDj8YXHO4p.png') no-repeat -276px -28px;    /*pentrist icon */
+	width: 34px;
+	height: 34px;
+	zoom: 0.5;
+	margin-left: 0.75rem;
+}
+.sell_one{
+	width: 50%;
+	margin-top: 0.5rem;
+	text-align: center;
+}
+.Amazon_sell{
+	width:25%; 
+	border: 1px solid rgb(214, 209, 209);  
+	border-radius: 10px;
+	padding: 0.5rem ;
+	margin-left: 4rem;
+}
+.third_view{
+	display: flex;
+}
+.page_num{
+	width: 50%;
+	text-align: left;
+	margin-right: 0;
+	padding-left: 40%;
+}
+.scroll_products{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.unikorne{
+	width: 13.5%;
+}
+.promotion{
+	display: flex;
+	align-content: center;
+}
+.promoted_products{
+	margin-left: 16%;
+}
+.horizen_rainbow{
+	margin-left: 1rem;
+	width: 28.75rem;
+	height: 4.5rem;
+}
+.horizen_logo{
+	padding-left: 11.25rem;
+}
+.lego_logo{
+	padding-left: 12.75rem;
+}
+.promotion{
+	margin-top: 1rem;
+	border-bottom: 1px solid rgb(214, 209, 209);  /* bottom line  */	
+}
